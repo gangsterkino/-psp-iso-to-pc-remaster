@@ -1,0 +1,8 @@
+interface:
+
+  display_name: "PSP ISO 到 PC 高清重制包"
+
+  short_description: "从 PSP ISO 分析到原生 PC 适配、高清素材、无损压缩与便携包验证"
+
+  default_prompt: "使用 $psp-iso-to-pc-remaster，把我提供的 PSP ISO 做成可直接运行的 PC 高清试玩包，并说明实际验证范围。"
+
