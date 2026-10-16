@@ -54,6 +54,7 @@ if ($LASTEXITCODE -ne 0) { throw '工程生成失败，先查看日志' }
 | 互斥锁缺失或阻塞 | guest workarea、owner、递归计数、争用、超时、删除；等待时释放执行令牌 | PSP SDK 快路径也修改 workarea，应以 guest 内存为权威；覆盖实际 HLE 的争用唤醒 |
 | 文件读成功却报零字节 | 读取长度、线程退出状态、WaitThreadEnd/CB 返回链 | 保留正负退出值，不能统一返回零；覆盖真实 HLE 入口 |
 | 音频反复载入 | 导入 NID、缓冲策略、调用频率、解码结果 | `sceAtracIsSecondBufferNeeded` 的全驻留路径；非零样本不等于人工听音通过 |
+| 语音断续而背景音乐连续 | 实际块长、回调大小、逐通道队列和部分供给；核实入队/等待顺序 | 见[语音断续排队与验证](audio-stutter.md)；帧数非整除不等于根因，全局 underrun 可能被其他通道掩盖 |
 | 有 draw call 却看不到画面 | 真实顶点/UV/颜色/混合/深度和裁剪状态 | through 模式 Z 先截断再限幅到 0…65535，覆盖 NaN、无穷和边界 |
 | 标题可见，剧情背景/人物全黑 | 实际 GE 指令流和提交数量，而非先重做素材 | 捕获 `BEZIER 0x05, arg=000404, vtype=80019f` 后才实现 2D through 三角曲面 |
 

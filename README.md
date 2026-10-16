@@ -14,6 +14,7 @@
 6. 原画质与高清分支、相对路径启动器、依赖收集、便携 ZIP 和完整性验证。
 7. Android ARM64 / Java-JNI / GLES / AAudio 适配、横屏触控和后台恢复，完整 APK、更新小包及高清资源 ZIP。
 8. 安卓资源流式安装与失败恢复、同签名覆盖升级保留存档、16 KiB 对齐检查，以及离屏测试和真机验证分层。
+9. 语音断续的独立解决页：识别全局指标掩盖、验证短块补给余量、限制新增延迟，并保留无设备回归与实际听音的区别。
 
 它是一套工程方法与辅助工具，不是一键转换任意游戏的程序。新游戏需要重新验证主程序、资源格式、运行时兼容性及游戏特定地址。
 
@@ -52,6 +53,7 @@ git clone https://github.com/gangsterkino/-psp-iso-to-pc-remaster.git (Join-Path
 | [高清与无损存储](references/hd-assets.md) | 素材清单、字库、表情图集和像素验证 |
 | [便携发布](references/portable-release.md) | 资源去重、启动器、依赖和归档验证 |
 | [安卓适配与分发](references/android-release.md) | 原生后端、高清渲染、触控、资源安装、签名升级和手机验收 |
+| [语音断续解决页](references/audio-stutter.md) | 音乐正常但对白断续时的逐通道诊断、有界预缓冲、旧新对照与真机验收边界 |
 | [本次案例](references/railgun-case-study.md) | ULJS00354 / PC HD8.6 / Android A0.2 的过程、体积与限制 |
 | [convert_rgba_pack.py](scripts/convert_rgba_pack.py) | 将已有 RGTX RGBA 包转换为更小的无损存储 |
 | [portable_archive.py](scripts/portable_archive.py) | 从干净 staging 生成并验证 ZIP 与外置哈希清单 |

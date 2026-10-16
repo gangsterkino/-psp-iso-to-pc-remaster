@@ -33,6 +33,7 @@ description: "把用户提供的 PSP ISO 或已有原生工程制作成 Windows 
 
 - 镜像、工具来源与工作区：[references/intake-and-layout.md](references/intake-and-layout.md)。
 - 重编译、兼容修复、鼠标和自动阅读：[references/native-porting.md](references/native-porting.md)。
+- 语音断续、背景音乐正常或音频排队/退出问题：[references/audio-stutter.md](references/audio-stutter.md)。仅遇到对应音频症状时读取。
 - 高清、字库、表情和无损存储：[references/hd-assets.md](references/hd-assets.md)。
 - 去重、原画质分支、启动器和最终包：[references/portable-release.md](references/portable-release.md)。
 - 安卓原生移植、高清渲染、资源安装与 APK 更新：[references/android-release.md](references/android-release.md)。仅目标为 Android 时读取。
