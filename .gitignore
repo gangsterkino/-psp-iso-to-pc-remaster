@@ -10,3 +10,11 @@ outputs/
 *.dll
 *.zip
 *.skill
+*.apk
+*.aab
+*.apks
+*.so
+*.p12
+*.jks
+*.keystore
+local.properties
